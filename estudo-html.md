@@ -41,18 +41,31 @@ A maioria das tags, por sua vez, precisam ser declaradas com um início e um fim
 Seguem exemplos de algumas tags utilizadas para a construção de uma página HTML:
 
 ```html
+<!-- Define que o documento é do tipo HTML -->
+<!DOCTYPE html>
+```
+
+```html
 <!-- Define um documento HTML -->
 <html> </html>
- ```
+```
 
- ```html
- <!-- Define infos sobre o documento -->
+```html
+ <!-- Define o cabeçalho p/ infos sobre o documento -->
 <head> </head>
+```
+
+```html
+<!-- Geralmente utilizada para search engines, porém tem inúmeras funções p/ o documento. Mais detalhes no link abaixo. -->
+<meta charset="UTF-8">
  ```
+* [DevMedia- Guia sobre Meta Tags](https://www.devmedia.com.br/html-meta-tags-entendendo-o-uso-de-meta-tags/30328)
+
 ```html
 <!-- Define o título do documento -->
 <title> </title>
  ```
+
 ```html
 <!-- Define o elemento do corpo do documento -->
 <body> </body>
@@ -102,7 +115,7 @@ Percebe-se que a tag `<b>` está abre e fecha dentro da tag `<h2>`, tornando ass
 Todo o conteúdo de texto está inserido dentro do `<h2>`, enquanto apenas a palavra "Greater" faz parte do elemento negrito e apenas "Flamingo" faz parte do elemento itálico, e tanto o itálico quanto o negrito estão dentro do `<h2>`.
 
 
-Outro exemplo de nesting em uma estrutura html:
+Outro exemplo de nesting em uma estrutura básica em html:
 
 ![nesting-img](https://i1.wp.com/qatechhub.com/wp-content/uploads/2016/09/BasicHtmlStructure.png?resize=540%2C360 "Exemplo nesting")
 
@@ -111,11 +124,17 @@ Outro exemplo de nesting em uma estrutura html:
 
 São comandos que atribuem características para as tags HTML. Existem atributos globais - que funcionam para todas as tags - e atributos específicos para determinadas tags. Todo atributo possui um nome e um valor.
 
+Exemplo de atributo `lang`, que define a linguagem do documento html:
+
+```html
+    <html lang="pt-br">
+``` 
+
 Exemplo utilzando o atributo global `style`, com o valor `text-align:center;`:
 
 ```html
     <h1 style="text-align:center;"> texto </h1>
-```    
+```     
 
 Exemplo de atributo privado `src` que se aplica apenas para elementos que utilizem uma URL incorporável, como por exemplo `<img>`, `<script>`, `<video>` entre outros: 
 
@@ -129,6 +148,102 @@ Exemplo de atributo privado `src` que se aplica apenas para elementos que utiliz
 
 ####  1.2. <a name='SemanticHTML'></a>Semantic HTML
 
+HTML Semântico é o uso da linguagem HTML para reforçar o significado de todas as informações inseridas no seu documento. Essa semântica, por exemplo, facilita para os leitores de tela identificarem todas as seções da página.
+
+Por exemplo, um código repleto de `<div>` no cabeçalho do site:
+
+```html
+<div>
+	<div>Meu Blog</div>
+	<div>
+		<div>Página inicial</div>
+		<div>Categorias</div>
+		<div>Contato</div>
+		<div>Sobre mim</div>
+	</div>
+</div>
+```
+
+Por exemplo, este HTML não semântico impossibilitaria o leitor de tela identificar que trata-se de um cabeçalho.
+
+Agora o mesmo cabeçalho refatorado para ser semântico:
+```html
+<header>
+	<h1>Meu Blog</h1>
+	<nav>
+		<ul>
+			<li><a href="/">Página inicial</a></li>
+			<li><a href="/categorias">Categorias</a></li>
+			<li><a href="/contato">Contato</a></li>
+			<li><a href="/sobre-mim">Sobre mim</a></li>
+		</ul>
+	</nav>
+</header>
+```
+- Incluindo a tag `<header>`, já é possível identificar que o elemento presente trata-se de um cabeçalho;
+
+- A tag `<h1>` identifica o título principal; 
+
+- A tag `<nav>` identifica que é um elemento de navegação do site;
+
+- Dentro da nav, foi inserida uma lista não ordenada através da tag `<ul>`;
+
+- Esta lista não ordenada possui itens, elementos caracterizados pela tag `<li>`;
+
+Agora é possível que um leitor de dela identifique todos os elementos daquele cabeçalho (além do próprio).
+
+##### Content Models
+
+Modelos de conteúdo são formas de dar significado aos elementos HTML, definidos por regras que dizem que modelo de conteúdo cada elemento trabalha.
+
+Os elementos HTML são divididos em categorias para atribuição desse significado: 
+
+![modelos-conteudo](https://developer.mozilla.org/@api/deki/files/6244/=Content_categories_venn.png?size=webview "Modelos de conteúdo")
+
+* Metadata content
+
+Os elementos pertencentes a categoria conteúdo de metadados modificam a apresentação ou o comportamento do resto do documento, define ligações para outros documentos ou transmitem outras informações. 
+
+*Alguns* Exemplos: `<meta>`, `<style>` e `<title>`.
+
+* Flow content:
+
+> Elementos pertencentes a categoria de conteúdo de fluxo tipicamente contém texto ou conteúdo embutido. A maioria dos elementos utilizados no body e aplicações são categorizados como Flow Content. 
+
+*Alguns* Exemplos: `<a>`, `<div>`, `<button>`, `<embed>` e `<img>`.
+
+* Sectioning content:
+
+> Os elementos pertencentes ao modelo de conteúdo de sectioning criam uma seção no esboço atual que define o escopo dos elementos `<header>`, elementos `<footer>` e no conteúdo do cabeçalho.
+
+Exemplos: `<article>`, `<aside>`, `<nav>` e `<section>`.
+
+* Heading content:
+
+> O conteúdo do cabeçalho define o título de uma seção.
+
+Exemplos: `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` e `<hgroup>`. 
+
+* Phrasing content:
+
+>O conteúdo fraseado define o texto e a marcação que ele contém. Séries de conteúdos fraseados compõem parágrafos.
+
+*Alguns* Exemplos: `<b>`, `<input>`, `<i>` e `<label>`.
+
+* Embedded content:
+
+> O conteúdo embutido importa outro recurso ou insere conteúdo de uma outra linguagem de marcação no documento.
+
+Exemplos:  `<audio>`, `<canvas>`, `<embed>`, `<iframe>`, `<img>`, `<math>`, `<object>` e `<video>`.
+
+* Interactive content:
+
+> O conteúdo interativo inclui elementos que são especificamente desenvolvidos para a interação do usuário. Alguns elementos pertencem a essa categoria somente sob condições específicas.
+
+Exemplos:  `<a>`, `<button>`, `<details>`, `<embed>`, `<iframe>`, `<label>`, `<select>`, e `<textarea>`.
+
+Mais detalhes sobre modelos de conteúdo em: [Mozilla org - Modelos de conteúdo](https://developer.mozilla.org/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo) e [Tableless - Modelos de conteúdo no HTML5](https://tableless.com.br/modelos-de-conteudo-no-html5/)
+
 ________________
 
 ### 2. <a name='Referncias'></a>Referências 
@@ -137,8 +252,12 @@ ________________
 
 [Qatechclub - HTML Page structure and nesting](https://qatechhub.com/html-page-structure-nesting/)
 
+[Medium - O meu HTML é semântico e o seu?](https://medium.com/collabcode/meu-html-%C3%A9-sem%C3%A2ntico-e-o-seu-4e97c81c0c49)
+
 [Mozilla org - HTML Attributes](https://developer.mozilla.org/pt-BR/docs/HTML/Attributes)
 
 [Udemy - Curso Aprenda HTML](https://www.udemy.com/aprendahtml/)
+
+[DevMedia - Códigos HTML](https://www.devmedia.com.br/html-basico-codigos-html/16596)
 
 [Cheatsheet - HTML 5](http://testking.com/techking/wp-content/uploads/2011/02/IG-HTML5-Cheatsheet-1000px.png)
