@@ -90,16 +90,6 @@ Seguem exemplos de algumas tags utilizadas para a construção de uma página HT
 
 * [Lista de tags HTML 5](http://testking.com/techking/wp-content/uploads/2011/02/IG-HTML5-Cheatsheet-1000px.png)
 
- #### Caracteres Especiais
-
- Existem caracteres especiais que podem ser adcionados ao seu HTML. Seguem alguns exemplos mais comuns:
-
-- `&nbsp;` -  Non breakable space. Transforma um espaço não "quebrável" na identação de um texto; 
-- `&trade` - Insere o caractere especial de TradeMark ™;
-- `&amp` - Insere caractere especial do E comercial (&); 
-
-Estes são apenas alguns exemplos. Todos os caracteres estão nessa [lista de caracteres especiais](https://erikasarti.com/html/acentuacao-caracteres-especiais/).
-
 Todo o conteúdo necessário deve ficar entre a abertura e fechamento da tag, por exemplo a tag `<b>`, que deixa o texto em negrito: 
 
 ```html
@@ -112,7 +102,18 @@ Todo o conteúdo necessário deve ficar entre a abertura e fechamento da tag, po
 
 Importante ressaltar que nem todas as tags necessitam de fechamento, como a `<br>` por exemplo, utilizada para a quebra de linha. 
 
- #### Nesting (Aninhar)
+ #### Caracteres Especiais
+
+ Existem caracteres especiais que podem ser adcionados ao seu HTML. Seguem alguns exemplos mais comuns:
+
+- `&nbsp;` -  Non breakable space. Transforma um espaço não "quebrável" na identação de um texto; 
+- `&trade` - Insere o caractere especial de TradeMark ™;
+- `&amp` - Insere caractere especial do E comercial (&); 
+
+Estes são apenas alguns exemplos. Todos os caracteres estão nessa [lista de caracteres especiais](https://erikasarti.com/html/acentuacao-caracteres-especiais/).
+
+
+#### Nesting (Aninhar)
 Os elementos, por sua vez, podem ser "inseridos dentro" de outros elementos, criando assim uma relação de pai-filho entre os elementos/tags, o que comumente é chamado de *nesting*.  
 
 Por exemplo:
@@ -253,6 +254,8 @@ Exemplos:  `<audio>`, `<canvas>`, `<embed>`, `<iframe>`, `<img>`, `<math>`, `<ob
 > O conteúdo interativo inclui elementos que são especificamente desenvolvidos para a interação do usuário. Alguns elementos pertencem a essa categoria somente sob condições específicas.
 
 Exemplos:  `<a>`, `<button>`, `<details>`, `<embed>`, `<iframe>`, `<label>`, `<select>`, e `<textarea>`.
+
+- [Lista com todas e seus modelos de conteúdo](https://developer.mozilla.org/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo)
 
 #### Ênfases
 
