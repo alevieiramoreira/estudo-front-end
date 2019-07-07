@@ -20,13 +20,13 @@ Todas as anotações presentes neste documento são resultados do meu *próprio 
 
 ##  1. <a name='HTML'></a>HTML
 
-####  1.1. <a name='Learnthebasics'></a>Learn the basics
+###  1.1. <a name='Learnthebasics'></a>Learn the basics
 
 Resumidamente, HTML (Hypertext Markup Language) é uma linguagem de marcação utilizada para o desenvolvimento de páginas web, mais precisamente para construir o *corpo* da página.
 
  Por ser uma linguagem de marcação, devem ser marcados elementos para marcar quais infos são exibidas na página, utilizando as *Tags e Elementos*.
 
-##### Tags e Elementos
+#### Tags e Elementos
 
 Procurando material de estudos na internet, encontra-se uma grande utilização dos termos *tags* e *elementos*. Em alguns lugares são tratados praticamente como se fossem iguais mas existe diferença:
 
@@ -84,9 +84,21 @@ Seguem exemplos de algumas tags utilizadas para a construção de uma página HT
  ```html
  <!-- Heading tag para destacar títulos. Vai de h1 até h6. -->
 <h1> </h1>
+
+<!-- Por boas práticas, sempre utilizar a ordem hierárquica de 1 a 6 no documento, sem pular números -->
  ```  
 
 * [Lista de tags HTML 5](http://testking.com/techking/wp-content/uploads/2011/02/IG-HTML5-Cheatsheet-1000px.png)
+
+ #### Caracteres Especiais
+
+ Existem caracteres especiais que podem ser adcionados ao seu HTML. Seguem alguns exemplos mais comuns:
+
+- `&nbsp;` -  Non breakable space. Transforma um espaço não "quebrável" na identação de um texto; 
+- `&trade` - Insere o caractere especial de TradeMark ™;
+- `&amp` - Insere caractere especial do E comercial (&); 
+
+Estes são apenas alguns exemplos. Todos os caracteres estão nessa [lista de caracteres especiais](https://erikasarti.com/html/acentuacao-caracteres-especiais/).
 
 Todo o conteúdo necessário deve ficar entre a abertura e fechamento da tag, por exemplo a tag `<b>`, que deixa o texto em negrito: 
 
@@ -100,7 +112,7 @@ Todo o conteúdo necessário deve ficar entre a abertura e fechamento da tag, po
 
 Importante ressaltar que nem todas as tags necessitam de fechamento, como a `<br>` por exemplo, utilizada para a quebra de linha. 
 
- ##### Nesting (Aninhar)
+ #### Nesting (Aninhar)
 Os elementos, por sua vez, podem ser "inseridos dentro" de outros elementos, criando assim uma relação de pai-filho entre os elementos/tags, o que comumente é chamado de *nesting*.  
 
 Por exemplo:
@@ -120,7 +132,7 @@ Outro exemplo de nesting em uma estrutura básica em html:
 ![nesting-img](https://i1.wp.com/qatechhub.com/wp-content/uploads/2016/09/BasicHtmlStructure.png?resize=540%2C360 "Exemplo nesting")
 
 
-##### Atributos
+#### Atributos
 
 São comandos que atribuem características para as tags HTML. Existem atributos globais - que funcionam para todas as tags - e atributos específicos para determinadas tags. Todo atributo possui um nome e um valor.
 
@@ -145,8 +157,8 @@ Exemplo de atributo privado `src` que se aplica apenas para elementos que utiliz
 *   [Lista de atributos (globais e não globais)](https://developer.mozilla.org/pt-BR/docs/HTML/Attributes)
 
 - Por boas práticas, sempre atribuir o valor do atributo entre aspas duplas.
-
-####  1.2. <a name='SemanticHTML'></a>Semantic HTML
+----
+###  1.2. <a name='SemanticHTML'></a>Semantic HTML
 
 HTML Semântico é o uso da linguagem HTML para reforçar o significado de todas as informações inseridas no seu documento. Essa semântica, por exemplo, facilita para os leitores de tela identificarem todas as seções da página.
 
@@ -192,7 +204,7 @@ Agora o mesmo cabeçalho refatorado para ser semântico:
 
 Agora é possível que um leitor de dela identifique todos os elementos daquele cabeçalho (além do próprio).
 
-##### Content Models
+#### Content Models
 
 Modelos de conteúdo são formas de dar significado aos elementos HTML, definidos por regras que dizem que modelo de conteúdo cada elemento trabalha.
 
@@ -242,22 +254,32 @@ Exemplos:  `<audio>`, `<canvas>`, `<embed>`, `<iframe>`, `<img>`, `<math>`, `<ob
 
 Exemplos:  `<a>`, `<button>`, `<details>`, `<embed>`, `<iframe>`, `<label>`, `<select>`, e `<textarea>`.
 
+#### Ênfases
+
+A semântica também está presente nas tags HTML que dão ênfase ao conteúdo fraseado. Como assim? Os leitores de tela alteram o tom de voz da própria leitura, dependendo da utilizada. Seguem algumas comparações:
+
+- A tag `<b>` por exemplo é responsável por deixar o texto em negrito, porém um leitor de tela não dará ênfase alguma ao ler o elemento. A tag `<strong>` também deixará o texto em negrito, entretanto dará uma ênfase  vocal de **importância** pelo leitor de tela.
+
+- A tag `<em>` é visualmente semelhante a `<i>`, que deixará o texto em itálico. Porém, ao utilizar `<em>`, o leitor de tela dará ênfase vocal. Esta tag é comumente utilizada em textos de outras línguas ou citações. 
+
 Mais detalhes sobre modelos de conteúdo em: [Mozilla org - Modelos de conteúdo](https://developer.mozilla.org/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo) e [Tableless - Modelos de conteúdo no HTML5](https://tableless.com.br/modelos-de-conteudo-no-html5/)
 
 ________________
 
 ### 2. <a name='Referncias'></a>Referências 
 
-[Tableless - O que são Tags, elementos e atributos](https://tableless.github.io/iniciantes/manual/html/oquetags.html)
+- [Tableless - O que são Tags, elementos e atributos](https://tableless.github.io/iniciantes/manual/html/oquetags.html)
 
-[Qatechclub - HTML Page structure and nesting](https://qatechhub.com/html-page-structure-nesting/)
+- [Qatechclub - HTML Page structure and nesting](https://qatechhub.com/html-page-structure-nesting/)
 
-[Medium - O meu HTML é semântico e o seu?](https://medium.com/collabcode/meu-html-%C3%A9-sem%C3%A2ntico-e-o-seu-4e97c81c0c49)
+- [Medium - O meu HTML é semântico e o seu?](https://medium.com/collabcode/meu-html-%C3%A9-sem%C3%A2ntico-e-o-seu-4e97c81c0c49)
 
-[Mozilla org - HTML Attributes](https://developer.mozilla.org/pt-BR/docs/HTML/Attributes)
+- [Mozilla org - HTML Attributes](https://developer.mozilla.org/pt-BR/docs/HTML/Attributes)
 
-[Udemy - Curso Aprenda HTML](https://www.udemy.com/aprendahtml/)
+- [Udemy - Curso Aprenda HTML](https://www.udemy.com/aprendahtml/)
 
-[DevMedia - Códigos HTML](https://www.devmedia.com.br/html-basico-codigos-html/16596)
+- [DevMedia - Códigos HTML](https://www.devmedia.com.br/html-basico-codigos-html/16596)
 
-[Cheatsheet - HTML 5](http://testking.com/techking/wp-content/uploads/2011/02/IG-HTML5-Cheatsheet-1000px.png)
+- [Cheatsheet - HTML 5](http://testking.com/techking/wp-content/uploads/2011/02/IG-HTML5-Cheatsheet-1000px.png)
+
+- [Tableless - Diferenças sutis na semântica](https://tableless.com.br/diferencas-sutis-na-semantica/)
