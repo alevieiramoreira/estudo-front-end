@@ -8,9 +8,16 @@ Todas as anotações presentes neste documento são resultados do meu *próprio 
 
 <!-- vscode-markdown-toc -->
 * 1. [HTML](#HTML)
-		* 1.1. [Learn the basics](#Learnthebasics)
-		* 1.2. [Semantic HTML](#SemanticHTML)
-* 2. [Referências](#Referncias)
+	* 1.1. [Learn the basics](#Learnthebasics)
+		* 1.1.1. [Tags e Elementos](#TagseElementos)
+		* 1.1.2. [Caracteres Especiais](#CaracteresEspeciais)
+		* 1.1.3. [Nesting (Aninhar)](#NestingAninhar)
+		* 1.1.4. [Atributos](#Atributos)
+	* 1.2. [Semantic HTML](#SemanticHTML)
+		* 1.2.1. [Content Models](#ContentModels)
+		* 1.2.2. [Ênfases](#nfases)
+	* 1.3. [SEO](#SEO)
+	* 1.4. [Referências](#Referncias)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -26,7 +33,7 @@ Resumidamente, HTML (Hypertext Markup Language) é uma linguagem de marcação u
 
  Por ser uma linguagem de marcação, devem ser marcados elementos para marcar quais infos são exibidas na página, utilizando as *Tags e Elementos*.
 
-#### Tags e Elementos
+####  1.1.1. <a name='TagseElementos'></a>Tags e Elementos
 
 Procurando material de estudos na internet, encontra-se uma grande utilização dos termos *tags* e *elementos*. Em alguns lugares são tratados praticamente como se fossem iguais mas existe diferença:
 
@@ -102,7 +109,7 @@ Todo o conteúdo necessário deve ficar entre a abertura e fechamento da tag, po
 
 Importante ressaltar que nem todas as tags necessitam de fechamento, como a `<br>` por exemplo, utilizada para a quebra de linha. 
 
- #### Caracteres Especiais
+####  1.1.2. <a name='CaracteresEspeciais'></a>Caracteres Especiaiss
 
  Existem caracteres especiais que podem ser adcionados ao seu HTML. Seguem alguns exemplos mais comuns:
 
@@ -113,7 +120,7 @@ Importante ressaltar que nem todas as tags necessitam de fechamento, como a `<br
 Estes são apenas alguns exemplos. Todos os caracteres estão nessa [lista de caracteres especiais](https://erikasarti.com/html/acentuacao-caracteres-especiais/).
 
 
-#### Nesting (Aninhar)
+####  1.1.3. <a name='NestingAninhar'></a>Nesting (Aninhar)
 Os elementos, por sua vez, podem ser "inseridos dentro" de outros elementos, criando assim uma relação de pai-filho entre os elementos/tags, o que comumente é chamado de *nesting*.  
 
 Por exemplo:
@@ -133,7 +140,7 @@ Outro exemplo de nesting em uma estrutura básica em html:
 ![nesting-img](https://i1.wp.com/qatechhub.com/wp-content/uploads/2016/09/BasicHtmlStructure.png?resize=540%2C360 "Exemplo nesting")
 
 
-#### Atributos
+####  1.1.4. <a name='Atributos'></a>Atributos
 
 São comandos que atribuem características para as tags HTML. Existem atributos globais - que funcionam para todas as tags - e atributos específicos para determinadas tags. Todo atributo possui um nome e um valor.
 
@@ -205,7 +212,7 @@ Agora o mesmo cabeçalho refatorado para ser semântico:
 
 Agora é possível que um leitor de dela identifique todos os elementos daquele cabeçalho (além do próprio).
 
-#### Content Models
+####  1.2.1. <a name='ContentModels'></a>Content Models
 
 Modelos de conteúdo são formas de dar significado aos elementos HTML, definidos por regras que dizem que modelo de conteúdo cada elemento trabalha.
 
@@ -257,7 +264,7 @@ Exemplos:  `<a>`, `<button>`, `<details>`, `<embed>`, `<iframe>`, `<label>`, `<s
 
 - [Lista com todas e seus modelos de conteúdo](https://developer.mozilla.org/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo)
 
-#### Ênfases
+####  1.2.2. <a name='nfases'></a>Ênfases
 
 A semântica também está presente nas tags HTML que dão ênfase ao conteúdo fraseado. Como assim? Os leitores de tela alteram o tom de voz da própria leitura, dependendo da utilizada. Seguem algumas comparações:
 
@@ -267,9 +274,14 @@ A semântica também está presente nas tags HTML que dão ênfase ao conteúdo 
 
 Mais detalhes sobre modelos de conteúdo em: [Mozilla org - Modelos de conteúdo](https://developer.mozilla.org/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo) e [Tableless - Modelos de conteúdo no HTML5](https://tableless.com.br/modelos-de-conteudo-no-html5/)
 
+###  1.3. <a name='SEO'></a>SEO
+
+
 ________________
 
-### 2. <a name='Referncias'></a>Referências 
+###  1.4. <a name='Referncias'></a>Referências 
+
+-[Maujor - Escrevendo HTML Semântico](https://www.maujor.com/tutorial/escrevendo-html-semantico.php)
 
 - [Tableless - O que são Tags, elementos e atributos](https://tableless.github.io/iniciantes/manual/html/oquetags.html)
 
